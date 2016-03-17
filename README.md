@@ -1,5 +1,6 @@
 # AlgorithmsAndDataStructures
-Algorithms and data structures implementation
+
+- Algorithms and data structures implementation
 Data Structures
 STACK
 QUEUE
