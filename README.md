@@ -1,7 +1,7 @@
 # AlgorithmsAndDataStructures
 
 - Algorithms and data structures implementation
-Data Structures
+  - Data Structures
 STACK
 QUEUE
 GRAPH
