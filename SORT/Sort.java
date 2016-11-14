@@ -117,6 +117,39 @@ class Sort{
 		}
 	}
 
+	
+	public static int[]  radixSort(int[] arr){
+		boolean sorted=false;
+		int m=10;int n=1;int count=0;int v;
+		ArrayList[] indexArrayList=new ArrayList[10];
+		while(!sorted){
+			sorted=true;
+			for (int i=0;i<10;i++)
+				indexArrayList[i]=new ArrayList();
+			for (int i=0;i<arr.length;i++){
+				v=(arr[i]%m)/n;
+				indexArrayList[v].add(arr[i]);
+				}
+			int k=0;	
+			int prev=0;
+			for(int j=0;j<10;j++){
+				for (int l=0;l<indexArrayList[j].size();l++){
+					arr[k]=(int) indexArrayList[j].get(l);
+					if (prev>arr[k])
+						sorted=false;
+					 prev=arr[k];
+					 k++;
+					 }
+				}
+
+			if (!sorted){
+				m=m*10;
+				n=n*10;
+				}
+			}
+		return arr;
+		}
+	
 
 
 	public static void maxHeapify(int arr[],int i,int lastIndex){
